@@ -5,6 +5,8 @@ import BlazeTemplate from './BlazeTemplate';
 import {Users, Posts} from 'collections';
 import './App.css';
 
+import RaisedButton from 'material-ui/lib/raised-button';
+
 Meteor.call('sayHello', function(err, res) {
   console.log(res);
 });
@@ -23,7 +25,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <BlazeTemplate template={Template.loginButtons} />
-        <h1>Hello Webpack!</h1>
+        <h1>Hello Webpack!!</h1>
+        <RaisedButton label="Default" />
         <p>There are {userCount} users in the Minimongo  (login to change)</p>
         <p>There are {postsCount} posts in the Minimongo  (autopublish removed)</p>
       </div>
